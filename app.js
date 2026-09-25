@@ -13,7 +13,7 @@
      Exemplo:
      var URL_PLANILHA = 'https://script.google.com/macros/s/AKfycb.../exec';
      ============================================================ */
-  var URL_PLANILHA = 'https://script.google.com/macros/s/AKfycbxM8Va0kxCpJ75CTrVKBtaIBS6QfwSH80W3TmnQNNVj_roB6ErJn5IyZXaZCAC5hFh_QA/exec';
+  var URL_PLANILHA = 'https://script.google.com/macros/s/AKfycbwCPnsjjtwoNRPagULo0X3N0RVapUPoYve44BGbF9lPA8HNgDKaVje8d9q50PlCsUQ1EQ/exec';
 
   /* ---------------- Utilidades ---------------- */
   function $(id) { return document.getElementById(id); }
