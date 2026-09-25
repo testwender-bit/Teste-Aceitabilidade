@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#14532D">
+  <meta name="description" content="Teste de Aceitabilidade da Alimentação Escolar — Secretaria Municipal de Educação de Lucas do Rio Verde - MT">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Aceitabilidade">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <title>Aceitabilidade · Lucas do Rio Verde</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- Painel do operador: 5 toques seguidos neste topo pedem a senha (engrenagem escondida) -->
+    <header class="topo" id="topo">
+      <img src="brasao.png" alt="Brasão do Município de Lucas do Rio Verde" class="brasao">
+      <div class="topo-texto">
+        <span class="municipio">Lucas do Rio Verde — MT</span>
+        <span class="secretaria">Secretaria Municipal de Educação</span>
+      </div>
+      <div class="topo-acoes">
+        <button type="button" id="btn-tela-cheia" class="btn-icone" aria-label="Alternar tela cheia" title="Tela cheia">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="voto">
+      <h1 id="pergunta" class="pergunta">Como foi a alimentação<br>escolar hoje?</h1>
+
+      <div class="opcoes">
+        <button type="button" class="opcao op0" data-cod="0">
+          <span class="face">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="23" cy="26" r="3.4" fill="currentColor"/><circle cx="41" cy="26" r="3.4" fill="currentColor"/><path d="M23 43.5h18" fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round"/></svg>
+          </span>
+          <span class="rotulo">Não comi</span>
+        </button>
+
+        <button type="button" class="opcao op1" data-cod="1">
+          <span class="face">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="4"/><path d="M15.5 20.5 26 25.5M48.5 20.5 38 25.5" fill="none" stroke="currentColor" stroke-width="4.4" stroke-linecap="round"/><circle cx="24" cy="31" r="3.2" fill="currentColor"/><circle cx="40" cy="31" r="3.2" fill="currentColor"/><path d="M21.5 47.5Q32 38.5 42.5 47.5" fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round"/></svg>
+          </span>
+          <span class="rotulo">Detestei</span>
+        </button>
+
+        <button type="button" class="opcao op2" data-cod="2">
+          <span class="face">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="23" cy="27" r="3.4" fill="currentColor"/><circle cx="41" cy="27" r="3.4" fill="currentColor"/><path d="M23.5 46.5Q32 39.5 40.5 46.5" fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round"/></svg>
+          </span>
+          <span class="rotulo">Não gostei</span>
+        </button>
+
+        <button type="button" class="opcao op3" data-cod="3">
+          <span class="face">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="23" cy="26" r="3.4" fill="currentColor"/><circle cx="41" cy="26" r="3.4" fill="currentColor"/><path d="M21 39.5Q32 50.5 43 39.5" fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round"/></svg>
+          </span>
+          <span class="rotulo">Gostei</span>
+        </button>
+
+        <button type="button" class="opcao op4" data-cod="4">
+          <span class="face">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="4"/><path d="M23 22.5c-2.2-2.8-7.6-1.6-7.6 2.1 0 2.8 3.4 4.9 7.6 8 4.2-3.1 7.6-5.2 7.6-8 0-3.7-5.4-4.9-7.6-2.1z" fill="currentColor"/><path d="M41 22.5c-2.2-2.8-7.6-1.6-7.6 2.1 0 2.8 3.4 4.9 7.6 8 4.2-3.1 7.6-5.2 7.6-8 0-3.7-5.4-4.9-7.6-2.1z" fill="currentColor"/><path d="M19.5 40.5Q32 55 44.5 40.5Z" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="rotulo">Adorei</span>
+        </button>
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <span class="rodape-escala">Escala Hedônica Facial · Teste de Aceitabilidade</span>
+      <span id="status-sync" class="status-sync" aria-live="polite"><span class="dot s-local"></span>Armazenamento local</span>
+    </footer>
+  </div>
+
+  <div id="overlay" class="overlay" role="status" aria-live="polite" hidden>
+    <span id="overlay-face" class="overlay-face"></span>
+    <span class="overlay-obrigado">Obrigado!</span>
+    <span id="overlay-resposta" class="overlay-resposta"></span>
+  </div>
+
+  <div id="guarda" class="guarda" hidden>
+    <div class="guarda-card">
+      <p class="guarda-titulo">Área do operador</p>
+      <p id="guarda-pergunta" class="guarda-pergunta">Digite a senha para continuar</p>
+      <input id="guarda-resp" class="guarda-resp" type="password" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="Senha">
+      <div class="guarda-acoes">
+        <button type="button" id="guarda-ok" class="btn btn-prim">Entrar</button>
+        <button type="button" id="guarda-cancel" class="btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="painel" class="painel" hidden>
+    <div class="painel-card">
+      <header class="painel-topo">
+        <h2>Painel do Operador</h2>
+        <button type="button" id="btn-fechar" class="btn-icone btn-icone-escuro" aria-label="Fechar painel" title="Fechar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </header>
+
+      <div class="painel-corpo">
+        <div class="bloco">
+          <h3>Configurações deste aparelho</h3>
+          <label for="cfg-titulo">Título da tela de votação (ex.: prato do dia)</label>
+          <input id="cfg-titulo" type="text" placeholder="Ex.: Como foi a preparação de Ragu de Carneiro?" autocomplete="off">
+          <p class="dica">Deixe vazio para usar o padrão “Como foi a alimentação escolar hoje?”</p>
+          <label for="cfg-escola">Escola (registrada em cada voto)</label>
+          <input id="cfg-escola" type="text" placeholder="Ex.: Escola Municipal Intermunicipal" autocomplete="off">
+          <label for="cfg-senha">Senha do painel (4 dígitos)</label>
+          <input id="cfg-senha" type="password" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="Deixe vazio para manter a atual">
+          <p class="dica">Senha padrão: 0000 — troque aqui quando quiser (fica gravada neste aparelho).</p>
+          <p id="aviso-url" class="mini-status erro" hidden>URL da planilha ainda não foi definida no código: abra o arquivo app.js e preencha a constante URL_PLANILHA no topo.</p>
+          <div class="linha-acoes">
+            <button type="button" id="btn-salvar" class="btn btn-prim">Salvar</button>
+            <button type="button" id="btn-testar" class="btn">Testar conexão</button>
+          </div>
+          <p id="teste-status" class="mini-status" aria-live="polite"></p>
+        </div>
+
+        <div class="bloco">
+          <h3>Resumo dos votos</h3>
+          <div id="chips" class="chips"></div>
+          <p class="totais">Hoje (<span id="data-hoje"></span>): <b id="tot-hoje">0</b> votos · Total geral: <b id="tot-geral">0</b></p>
+          <p class="totais">Sincronizados: <b id="tot-sync">0</b> · Pendentes: <b id="tot-pend">0</b></p>
+        </div>
+
+        <div class="bloco">
+          <h3>Ações</h3>
+          <div class="linha-acoes">
+            <button type="button" id="btn-sync" class="btn btn-prim">Sincronizar agora</button>
+            <button type="button" id="btn-csv" class="btn">Exportar CSV</button>
+          </div>
+          <div class="linha-acoes">
+            <button type="button" id="btn-limpar" class="btn btn-perigo">Apagar votos já sincronizados</button>
+          </div>
+          <div class="linha-acoes">
+            <button type="button" id="btn-sair-cheia" class="btn">Sair da tela cheia</button>
+            <button type="button" id="btn-sair" class="btn btn-perigo">Sair do aplicativo</button>
+          </div>
+          <p class="dica">Para abrir este painel: toque 5 vezes seguidas no topo da tela (no brasão) e digite a senha.</p>
+        </div>
+
+        <p class="painel-rodape">PWA Aceitabilidade v1.3 · Funciona offline · Dados guardados neste aparelho até serem enviados</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "Aceitabilidade da Alimentação Escolar — Lucas do Rio Verde",
+  "short_name": "Aceitabilidade",
+  "description": "Teste de Aceitabilidade da Alimentação Escolar da Secretaria Municipal de Educação de Lucas do Rio Verde - MT",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FBF7EF",
+  "theme_color": "#14532D",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
